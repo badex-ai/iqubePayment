@@ -1,0 +1,118 @@
+.cont {
+	padding: 7.6rem 0 1rem 0;
+	width: 75.6rem;
+	margin-bottom: 14.5rem;
+}
+
+.box {
+	background-color: white;
+	font-weight: 400;
+	font-size: 2rem;
+	height: auto;
+	border-radius: 20px;
+	color: #4e598c;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	margin-bottom: 7.5rem;
+}
+
+table {
+	border-collapse: collapse;
+
+	width: 75.6rem;
+}
+
+thead > tr {
+	background-color: #2f80ed;
+
+	color: white;
+}
+thead td {
+	padding: 2rem 8rem;
+	margin-bottom: 2rem;
+}
+thead td:last-child {
+	text-align: right;
+}
+
+tr:first-child td:first-child {
+	border-top-left-radius: 20px;
+}
+
+tr:first-child td:last-child {
+	border-top-right-radius: 20px;
+}
+tfoot:last-child td:first-child {
+	border-bottom-left-radius: 20px;
+}
+tfoot:last-child td:last-child {
+	border-bottom-right-radius: 20px;
+}
+
+tbody:before {
+	line-height: 3rem;
+	content: ".";
+	visibility: hidden;
+	display: block;
+}
+tbody {
+	background-color: #fff;
+}
+tbody td {
+	padding: 2.7rem 8rem;
+}
+tbody > tr:first-child td {
+	margin-top: 2rem;
+}
+
+tbody td:last-child {
+	text-align: right;
+}
+
+tfoot td {
+	padding: 2rem 8rem;
+}
+
+.line {
+	background-color: blue;
+}
+
+.sumCont {
+	/* width: 70rem; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* height: 10rem; */
+	background-color: white;
+	/* border-top: 1px solid black; */
+	/* margin: 0 auto; */
+}
+.sumline {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+	/* the one in the exercise is not properly spaces */
+	width: 68rem;
+	height: auto;
+	border-top: 1px solid #c0bfcf;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.sum {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 61.3rem;
+	height: 5.5rem;
+	border: 1px solid #c0bfcf;
+	border-radius: 5px;
+	/* margin-top: 2rem; */
+}
+
+.digit {
+	padding: 0 2rem;
+}
+
+.box2 {
+	width: 100%;
+	height: auto;
+}

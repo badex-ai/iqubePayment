@@ -1,0 +1,16 @@
+.org {
+	background-color: #f2b94b;
+	width: 23.1rem;
+	height: 6rem;
+	font-size: 2rem;
+	border: none;
+	color: white;
+	font-family: "Poppins";
+	font-weight: 600;
+	border-radius: 10px;
+}
+
+.wht {
+	background-color: white;
+	border: none;
+}

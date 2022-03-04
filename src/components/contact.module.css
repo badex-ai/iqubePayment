@@ -17,10 +17,26 @@ label {
 	font-weight: 600;
 }
 .head {
-	color: #f2994a;
 	font-size: 2.4rem;
 	margin-top: 4rem;
 	padding: 1.2rem 0 2.2rem 0;
 	font-family: "Poppins";
 	font-weight: 600;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* [.head > a {
+	color: #bdbdbd;
+}] */
+/* .head > a:active,
+a:focus {
+	color: #f2994a;
+} */
+
+.active {
+	color: #f2994a;
+}
+.notActive {
+	color: #bdbdbd;
 }

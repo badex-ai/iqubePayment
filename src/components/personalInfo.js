@@ -3,16 +3,32 @@ import classes from "./personalInfo.module.css";
 import Button from "./button";
 import Input from "./formInput";
 import AsteriskIcon from "../assets/asterisk";
+import { useNavigate } from "react-router";
+import CancelBtn from "./cancelBtn";
 
-function personalInfo() {
+function PersonalInfo(props) {
+	let navigate = useNavigate();
+
+	const cancel = (event) => {
+		event.preventDefault();
+		// navigate("/");
+		console.log("clickitti click");
+	};
+
+	const goToNext = (event) => {
+		console.log("next clicked");
+		event.preventDefault();
+		navigate("./billing");
+	};
+
 	return (
-		<form className={classes.cont}>
+		<form onSubmit={goToNext} className={classes.cont}>
 			<div className={classes.box}>
 				<div className={classes.label}>
 					<label>Name</label>
 				</div>
 
-				<Input></Input>
+				<Input name={"userName"} type={"text"}></Input>
 			</div>
 			<div className={classes.box}>
 				<div className={classes.label}>
@@ -25,26 +41,26 @@ function personalInfo() {
 						The purchase receipt would be sent to this address
 					</div>
 				</div>
-				<Input required></Input>
+				<Input name={"Email"} type={"email"} required></Input>
 			</div>
 			<div className={classes.box}>
 				<div className={classes.label}>
 					<label>Address 1</label>
 				</div>
-				<Input></Input>
+				<Input name={"address"} type={"text"}></Input>
 			</div>
 			<div className={classes.box}>
 				<div className={classes.label}>
 					<label>Address 2</label>
 				</div>
-				<Input></Input>
+				<Input name={"address2"} type={"text"}></Input>
 			</div>
 			<div className={classes.box2}>
 				<div className={classes.lg}>
 					<div className={classes.label}>
 						<label>Local Government</label>
 					</div>
-					<Input></Input>
+					<Input name={"LGA"} type={"text"}></Input>
 				</div>
 
 				<div className={classes.sml}>
@@ -59,12 +75,17 @@ function personalInfo() {
 				</div>
 			</div>
 
-			<div className={classes.btnBox}>
-				<Button value={"Next"}></Button>
-				<Button value={"Cancel Payment"} dec={"white"}></Button>
+			<div>
+				<Button type="submit" value={"Next"} color={"org"}></Button>
+
+				<CancelBtn
+					type={"reset"}
+					value={"Cancel Payment"}
+					cancelfunc={cancel}
+				></CancelBtn>
 			</div>
 		</form>
 	);
 }
 
-export default personalInfo;
+export default PersonalInfo;

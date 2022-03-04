@@ -1,6 +1,5 @@
 .cont {
-	/* background-color: greenyellow; */
-	padding: 7.6rem 0 1rem 0;
+	margin: 7.6rem 0 11rem 0;
 	width: 70.5rem;
 }
 .asterisk {
@@ -56,4 +55,5 @@ select {
 	width: 70%;
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 9rem;
 }

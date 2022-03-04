@@ -1,10 +1,14 @@
 import React, { Fragment } from "react";
 import classes from "./formInput.module.css";
 
-function forminput() {
+function forminput(props) {
 	return (
 		<Fragment>
-			<input className={classes.input}></input>
+			<input
+				type={props.type}
+				name={props.name}
+				className={classes.input}
+			></input>
 		</Fragment>
 	);
 }

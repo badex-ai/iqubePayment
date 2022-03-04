@@ -1,10 +1,13 @@
 import { React, Fragment } from "react";
-import classes from "./button.module.css";
+import "./button.css";
 
 function button(props) {
 	return (
 		<Fragment>
-			<button className={classes.org} type="submit">
+			<button
+				className={`btn ${props.color === "wht" ? "wht" : "org"}`}
+				type="submit"
+			>
 				{props.value}
 			</button>
 		</Fragment>

@@ -3,7 +3,8 @@ import classes from "./contact.module.css";
 import PersonalInfo from "./personalInfo";
 
 import BillingInfo from "./billingInfo";
-import { Route, Routes, Link } from "react-router-dom";
+import Completed from "./confirmPayment";
+import { Route, Routes, Link, NavLink } from "react-router-dom";
 
 function Form() {
 	return (
@@ -11,14 +12,36 @@ function Form() {
 			<div className={classes.title}>Complete your Purchase</div>
 
 			<div className={classes.head}>
-				<Link to={"./"}>Personal Info</Link>
-				<Link to={"./billing"}>Billing Info</Link>
-				<Link to={"./confirm"}>Confirm Payment</Link>
+				<NavLink
+					className={({ isActive }) =>
+						isActive ? classes.active : classes.notActive
+					}
+					to={"./"}
+				>
+					Personal Info
+				</NavLink>
+				<NavLink
+					className={({ isActive }) =>
+						isActive ? classes.active : classes.notActive
+					}
+					to={"./billing"}
+				>
+					Billing Info
+				</NavLink>
+				<NavLink
+					className={({ isActive }) =>
+						isActive ? classes.active : classes.notActive
+					}
+					to={"./confirmed"}
+				>
+					Confirm Payment
+				</NavLink>
 			</div>
 			<hr></hr>
 			<Routes>
 				<Route path="/" element={<PersonalInfo />} exact />
 				<Route path="billing" element={<BillingInfo />} exact />
+				<Route path="confirmed" element={<Completed />} exact />
 			</Routes>
 		</div>
 	);
